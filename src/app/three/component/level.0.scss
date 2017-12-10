@@ -1,0 +1,22 @@
+
+//import material mixins
+@import '../../../material/theming';
+
+:host{
+  display:flex;
+  flex-direction: column;
+  min-height:200px;
+  padding:18px;
+  background-color: mat-color($mat-grey,200);
+  color: mat-contrast($mat-grey,200);
+}
+
+.card-header{
+  display:flex;
+  align-items: baseline;
+  padding: 9px 0px 18px;
+  .card-title{
+    flex:1;
+    font-weight:700;
+  }
+}

@@ -1,0 +1,27 @@
+
+<section class="card-header">
+  <div class="card-title">
+    {{label}}
+  </div>
+  <nav class="nav-buttons">
+    <button mat-raised-button
+      (click)="createChild()" 
+      color="primary">Create Item</button>
+    <button mat-raised-button
+      (click)="saveAllItems()" 
+      color="accent">Save All</button>
+    <button mat-raised-button
+      (click)="deleteAllItems()" 
+      color="warn">Delete All</button>  
+  </nav>
+</section>
+
+<section class="card-body">
+  <!--Pass data to child -->
+  <app-three-level-1 *ngFor="let item of items"
+    [props]="item">
+  </app-three-level-1>
+
+</section>
+
+
