@@ -5,14 +5,16 @@
   </div>
   <nav class="nav-buttons">
     <button mat-raised-button
-      (click)="createChild()" 
-      color="primary">Create Item</button>
+      (click)="createChild('field')"
+      color="primary">Type field</button>
+
     <button mat-raised-button
-      (click)="saveAllItems()" 
-      color="accent">Save All</button>
+      (click)="createChild('list')"
+      color="primary">Type list</button>
+
     <button mat-raised-button
-      (click)="deleteAllItems()" 
-      color="warn">Delete All</button>  
+      (click)="deleteAllItems()"
+      color="warn">Delete All</button>
   </nav>
 </section>
 
@@ -21,7 +23,6 @@
   <app-three-level-1 *ngFor="let item of items"
     [props]="item">
   </app-three-level-1>
-
 </section>
 
 

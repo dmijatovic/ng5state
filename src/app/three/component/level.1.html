@@ -4,35 +4,48 @@
     {{label}}
   </div>
   <nav class="nav-buttons">
+    <!--
     <button mat-icon-button
-      (click)="createChild()" 
+      (click)="createGroup()"
       color="primary">
-      <mat-icon class="mat-24" 
+      <mat-icon class="mat-24"
         aria-label="Add something">
-          favorite
+          reorder
+      </mat-icon>
+    </button>
+    -->
+    <button mat-icon-button
+      (click)="createItem()"
+      color="primary">
+      <mat-icon class="mat-24"
+        aria-label="Add something">
+        note_add
       </mat-icon>
     </button>
     <button mat-icon-button
-      (click)="saveAllItems()" 
-      color="accent">
-      <mat-icon class="mat-24" 
-        aria-label="Add something">
-        favorite
-      </mat-icon>
-    </button>
-    <button mat-icon-button
-      (click)="deleteMe()" 
+      (click)="deleteMe()"
       color="warn">
-      <mat-icon class="mat-24" 
+      <mat-icon class="mat-24"
         aria-label="Add something">
-        favorite
+        delete
       </mat-icon>
-    </button>  
+    </button>
   </nav>
 </section>
 
 <section class="card-body">
-  
+  <ng-container *ngFor="let item of items">
+
+    <!-- filter item -->
+    <app-three-level-fld *ngIf="item.type=='field'"
+        [props]="item">
+    </app-three-level-fld>
+
+    <app-three-level-lst *ngIf="item.type=='list'"
+        [props]="item">
+    </app-three-level-lst>
+
+  </ng-container>
 
 </section>
 

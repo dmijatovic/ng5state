@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { Three.SvcService } from './three.svc.service';
+import { ThreeDataService } from './three.svc';
 
 describe('Three.SvcService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [Three.SvcService]
+      providers: [ThreeDataService]
     });
   });
 
-  it('should be created', inject([Three.SvcService], (service: Three.SvcService) => {
+  it('should be created', inject([ThreeDataService], (service: ThreeDataService) => {
     expect(service).toBeTruthy();
   }));
 });

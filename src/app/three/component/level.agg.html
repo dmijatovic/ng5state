@@ -1,0 +1,51 @@
+<!-- Field item -->
+<section class="field-item">
+
+  <div class="item-data">
+
+    <form #aggregation>
+      <!-- Field 1 -->
+      <mat-form-field>
+        <mat-select
+          #funcName
+          placeholder="Function">
+          <mat-option *ngFor="let item of funcs"
+            [value]="item.value">
+            {{ item.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-select
+          #operatorName
+          placeholder="Operator">
+          <mat-option *ngFor="let item of operators"
+            [value]="item.value">
+            {{ item.label }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput
+          #funcVal
+          placeholder="Value"
+          value="">
+      </mat-form-field>
+    </form>
+
+  </div>
+
+  <nav class="nav-buttons">
+    <button mat-icon-button
+      (click)="deleteMe()">
+      <mat-icon class="mat-24"
+        aria-label="Add something">
+        delete
+      </mat-icon>
+    </button>
+  </nav>
+
+</section>
+

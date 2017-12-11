@@ -1,0 +1,23 @@
+
+//import material mixins
+@import '../../../material/theming';
+
+:host{
+  display:flex;
+  flex-direction: column;
+  min-height:50px;
+  padding:9px;
+  margin-bottom: 9px;
+  background-color: mat-color($mat-grey,100);
+  color: mat-contrast($mat-grey,100);
+  border:1px solid mat-color($mat-grey,400);
+}
+
+
+.field-item{
+  display:flex;
+  align-items: baseline;
+  .item-data{
+    flex:1;
+  }
+}
